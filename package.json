@@ -1,5 +1,5 @@
 {
-  "name": "test2",
+  "name": "evaluation3-back",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,7 @@
     "jest": "^22.2.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "hapi": "^16.6.2",
     "nodemon": "^1.14.12",
     "pg": "^7.4.1",
