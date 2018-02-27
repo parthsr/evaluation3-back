@@ -10,7 +10,6 @@ describe('checking if the database is properly working or not', () => {
   });
   it('checking if the inserting of data works or not', (done) => {
     Models.questions.create({
-
       question: 'question',
       questionid: 1,
       options: 'hi',
