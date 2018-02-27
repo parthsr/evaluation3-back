@@ -17,7 +17,7 @@ describe('checking if the database is properly working or not', () => {
       rightans: 'rightans',
 
     }).then(() => 'true').then((value) => {
-      console.log(value);
+      expect(value).toBe('true');
       done();
     });
   });
