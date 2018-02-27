@@ -30,4 +30,14 @@ describe('checking if the server works or not', () => {
       done();
     });
   });
+  test('checking if the database is created or not', (done) => {
+    const options = {
+      url: '/getAll',
+      method: 'POST',
+    };
+    server.inject(options, (response) => {
+      expect(response.result).toBe('database created');
+      done();
+    });
+  });
 });
