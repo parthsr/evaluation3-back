@@ -1,4 +1,5 @@
 const getAll = require('./getAll');
+const sendAll = require('./sendAllQ');
 
 module.exports = [{
   method: 'GET',
@@ -6,4 +7,4 @@ module.exports = [{
   handler: (request, reply) => {
     reply('HelloWorld');
   },
-}].concat(getAll);
+}].concat(getAll).concat(sendAll);
