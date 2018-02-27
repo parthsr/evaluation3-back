@@ -1,12 +1,13 @@
-const getQWithA = require('../helpers/getQWithA');
+const store = require('../helpers/store');
 
 module.exports = [{
-  method: 'GET',
+  method: 'POST',
   path: '/getAll',
   handler: (request, reply) => {
-    const toReply = getQWithA();
-    toReply.then((allData) => {
-      reply(allData);
+    store().then(() => {
+      reply('database created').code(200);
+    }).catch(() => {
+      reply('database transaction failed').code(500);
     });
   },
 }];
