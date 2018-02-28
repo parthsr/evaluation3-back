@@ -7,7 +7,7 @@ const store = () => getQWithA().then((results) => {
     let options = '';
     for (let i = 0; i < keys.length; i += 1) {
       if (keys[i] !== 'question' && keys[i] !== 'questionId' && keys[i] !== 'rightAnswer') {
-        options += `${result[keys[i]]}, `;
+        options += `${result[keys[i]]},`;
       }
     }
     console.log(options, result.question);
